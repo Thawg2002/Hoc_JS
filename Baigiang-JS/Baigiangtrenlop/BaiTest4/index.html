@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="check"> </div>
+    <form method="get" onsubmit="return valForm()">
+        <input type="text" id="sanPham" placeholder="San Pham"><br>
+        <select name="loaiSP" id="loai">
+            <option value=""></option>
+            <option value="200">loai 1</option>
+            <option value="300">loai 2</option>
+            <option value="400">loai 3</option>
+        </select><br>
+        <input type="number" id="donGia" name="donGia" placeholder="Don Gia" onchange="tinhtien()"><br>
+        <input type="number" id="soluong" name="soluong" placeholder="So luong" onchange="tinhtien()"><br>
+        <input type="number" id="thanhtien" name="thanhtien" placeholder="Thanh tien"><br>
+
+        <div onchange="noiNhanSP()">
+            <input type="radio" name="noiNhan" /> Noi nhan
+            <input type="radio" name="noiNhan" /> Ngoai thanh
+
+        </div>
+
+        <input type="checkbox" name="mauSac" value="1" id="">do
+        <input type="checkbox" name="mauSac" value="2" id="">vang
+
+        <input type="checkbox" name="mauSac" value="3" id="">xanh
+
+        <div>
+            <label for="">phi van chuyen</label>
+            <input type="number" id="phiVC">
+        </div>
+        <input type="submit" value="submit">
+    </form>
+
+
+    <script>
+        function valForm() {
+            //San pham
+            var sanPham = document.getElementById("sanPham");
+            if (sanPham.value == "") {
+                message("San pham không đẻ trống");
+                // alert("....")
+                return false;
+            }
+
+            //loại
+            var loai = document.getElementById("loai");
+            if (loai.value == "") {
+                message("loai khong de trong");
+                // alert("....2")
+                return false;
+            }
+            //noi nhan
+            var radio = document.getElementsByName("noiNhan");
+            if (!radio[0].checked && !radio[1].checked) {
+                message("noi nhan khong de trong");
+                return false;
+            }
+
+            //màu sắc
+            var checkArr = document.getElementsByName("mauSac");
+            var valueArr = [];
+            for (let i = 0; i < checkArr.length; i++) {
+                if (checkArr[i].checked) {
+                    valueArr.push(checkArr[i].checked);
+                }
+
+            }
+            if (valueArr.length == 0) {
+                message("mau sac khong de trong");
+                return false;
+            }
+            return alert("dăt hang thanh cong");
+        }
+        function message(msg) {
+            document.getElementById("check").innerHTML = msg;
+        }
+        function noiNhanSP() {
+            var noiNhan = document.getElementsByName("noiNhan");
+            var phiVC = document.getElementById("phiVC");
+            if (noiNhan[0].checked) {
+                phiVC.value = 2000;
+                console.log(phiVC.value);
+            }
+            if (noiNhan[1].checked) {
+                phiVC.value = 7000;
+            }
+        }
+        //tinh tien
+        function tinhtien() {
+            var donGia = document.getElementById("donGia");
+            var soluong = document.getElementById("soluong");
+            document.getElementById("thanhtien").value = Number(donGia.value) * Number(soluong.value);
+        }
+    </script>
+
+
+</body>
+
+</html>

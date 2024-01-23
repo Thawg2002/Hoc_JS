@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    .img,
+    .remote{
+      display: flex;
+      justify-content: center;  
+      height: 100%;
+    }
+    .remote{
+        margin-top: 12px;
+    }
+    button{
+        margin-right: 5px;
+    }
+</style>
+<body onload="onload()">
+    <div class="img">
+        <img onmouseout="imgOut()" onmouseover="imgOver()" class="img-icon" src="./img/1.png" alt="">
+    </div>
+    <div class="remote">
+        <button class="first" onclick="firstImg()">First</button>
+        <button class="prev" onclick="prevImg()">Prev</button>
+        <button class="next" onclick="nextImg()">Next</button>
+        <button class="last" onclick="lastImg()">Last</button>
+
+    </div>
+    <script>
+        const img = document.querySelector("img")
+         var imgs = []
+      function onload(){
+       const x = 0 ;
+        var sum = 0 ;
+        for(var i = 0 ; i <5;i++){
+            imgs[i] = new Image();
+        
+            imgs[i].src = `./img/${++sum}.png`
+        }
+        
+     }
+     
+     function imgOut(){
+        event.target.src = imgs[0].src
+            
+    }
+     function imgOver(){
+        event.target.src = imgs[1].src
+     }
+     function firstImg(){
+        img.src = imgs[0].src
+     }
+     var currentIndex = 0 ; 
+     function prevImg(){
+        --currentIndex
+
+        if(currentIndex <0){
+            currentIndex = 0
+            img.src=imgs[currentIndex].src
+           
+        }
+        else {
+            img.src=imgs[currentIndex].src
+        }
+        
+     }
+     function  nextImg(){
+       
+       ++currentIndex
+        if(currentIndex <=4){
+            img.src=imgs[currentIndex].src
+            
+        }
+        else {
+            currentIndex = 4
+            img.src=imgs[currentIndex].src
+           
+        }
+     
+     }
+     function lastImg(){
+        const length = imgs.length
+        console.log(length)
+        img.src = imgs[length-1].src
+     }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Kiểu dữ liệu trong Javascript
+        1.Dữ liệu nguyên thủy - Primitive Data
+        -Number
+        -String
+        - Boolean
+        -Underfined
+        -Null
+        -Symbol
+        2.Kiểu dữ liệu phức tạp - Complex Dât
+        -Function
+        -Object
+        */
+
+       //Chú ý: Kết quả trả về của typeof sẽ luôn là 1 chuỗi,
+        
+       
+       //Number type
+        var a = 1;
+        var b = 2;
+
+        console.log(typeof a);
+
+        //String type 
+        var fullName = 'Son Dang';
+
+        //Boolean:Thể hiện sự đúng sai
+        var isSuccess = true;
+
+        //Underfined : Không sử dụng toán tử gán
+        var age;
+
+        //Null : không có gì nothing
+        var isNull = null;
+
+        //Symbol 
+        var id = Symbol('id'); // unique:duy nhất
+
+        //Function
+        var myFunction = function(){
+            alert('Hi xin  chao cac ban!');
+        }
+        myFunction();
+
+        //Object type :(key: value) 
+        var myObject = {
+            name: 'Son Dang',
+            age: 18,
+            adress: 'Ha Noi',
+        };
+        console.log('myObject',myObject);
+
+
+        var myArray = [
+            'Javascrip',
+            'PHP',
+            'Ruby'
+        ];
+        console.log(myArray);
+    </script>
+</body>
+
+</html>

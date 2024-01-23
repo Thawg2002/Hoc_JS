@@ -1,0 +1,34 @@
+{
+  "couses": [
+    {
+      "id": 1,
+      "name": "Kiến thức cơ bản.Tổng quan",
+      "description": "Kiến thức cơ bản"
+    },
+    {
+      "id": 2,
+      "name": "Kiến thức cơ bản.Tổng quan2",
+      "description": "Kiến thức cơ bản2"
+    },
+    {
+      "id": 3,
+      "name": "Kiến thức cơ bản.Tổng quan3",
+      "description": "Kiến thức cơ bản3"
+    },
+    {
+      "id": 4,
+      "name": "Kiến thức cơ bản.Tổng quan4",
+      "description": "Kiến thức cơ bản4"
+    },
+    {
+      "id": 5,
+      "name": "Kiến thức cơ bản.Tổng quan5",
+      "description": "Kiến thức cơ bản5"
+    },
+    {
+      "id": 6,
+      "name": "Kiến thức cơ bản.Tổng quan 6",
+      "description": "Kiến thức cơ bản 6"
+    }
+  ]
+}

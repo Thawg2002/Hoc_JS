@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="kiemtra()">
+        <h2>Form đăng ký</h2>
+        <p>
+            <label>Họ</label>
+            <input type="text" id="firstname">
+        </p>
+        <p>
+            <label>Tên</label>
+            <input type="text" id="lastname">
+        </p>
+        <p>
+            <label>Ngày sinh</label>
+            <input type="date" id="date">
+        </p>
+        <p>
+            <label>Gioi tính</label>
+            <label><input type="radio" name="gender">Nam</label>
+            <label><input type="radio" name="gender">Nữ</label>
+        </p>
+        <p>
+            <label>So dien thoai</label>
+            <input type="text" id="phone">
+        </p>
+        <p>
+            <label>Sở thích</label>
+            <label><input type="checkbox" value="Đọc sách" name="hobbies">Đọc sách</label>
+            <label><input type="checkbox" value="Đá bóng" name="hobbies">Đá bóng</label>
+            <label><input type="checkbox" value="Nghe nhạc" name="hobbies">Nghe nhạc</label>
+            <label><input type="checkbox" value="Xem phim" name="hobbies">Xem phim</label>
+            <label><input type="checkbox" name="hobbies" onclick="hien_thi()"></label>
+        </p>
+<button>Đăng ký</button>
+    </form>
+    <script>
+        function kiemtra() {
+            var ho = document.getElementById("firstname");
+            var ten = document.getElementById("lastname");
+            var date = document.getElementById("date")
+            var gender = document.getElementsByName("gender");
+            var phone = document.getElementById("phone");
+            var hobbies = document.getElementsByName("hobbies");
+            if (ho.value.length == 0){
+                alert("chưa nhâp ho");
+            }
+            if (ten.value.length == 0){
+                alert("chưa nhâp ten");
+            }
+            if(date.value == ""){
+                alert("chưa nhập ngày")
+            }
+            if(!gender[0].checked && !gender[1].checked){
+                alert("chưa chọn giới tính!")
+            }
+            if(phone.value.length < 10 || hone.value.length > 11 ){
+                alert("SĐT phải 11 số")
+            }
+            for (let i = 0; i < hobbies.length; i++) {
+                if(hobbies[i].checked){
+                    count++;
+                }
+            }
+            if(count < 1){
+                alert("Phải chọn 1 sở thích")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

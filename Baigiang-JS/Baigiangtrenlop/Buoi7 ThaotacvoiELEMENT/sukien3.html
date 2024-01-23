@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DEMO LOAD TRƯỚC ẢNH -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hoaover = new Image();
+        var hoaout = new Image();
+        function loatAnh(){
+            hoaover.src = "https://baoninhbinh.org.vn//DATA/ARTICLES/2021/5/17/cuoc-dua-lot-vao-top-100-anh-dep-di-san-van-hoa-va-thien-7edf3.jpg";
+            hoaout.src = "https://bazantravel.com/cdn/medias/uploads/29/29068-di-san-trang-an-ninh-binh.jpg"
+        }
+        function onMouseOverEvent() { document.img_hoa.src = hoaover.src}
+        function onMouseOutEvent(){document.img_hoa.src = hoaout.src;}
+    </script>
+</head>
+<body>
+    <img name="img_hoa" src="https://bazantravel.com/cdn/medias/uploads/29/29068-di-san-trang-an-ninh-binh.jpg"
+     alt="" onmouseover="onMouseOverEvent();" onmouseout="onMouseOutEvent();">
+
+</body>
+</html>

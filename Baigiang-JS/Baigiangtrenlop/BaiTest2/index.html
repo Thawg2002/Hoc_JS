@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="kiemtra()">
+        <h2>Sản Phẩm</h2>
+        <p>
+            <label>Sản Phẩm</label>
+            <input type="text" id="tensp">
+        </p>
+        <p>
+            <label>Loại</label>
+            <select name="" id="loai"  onclick="luachon()">
+                <option checked value="" hidden></option>
+                <option value="1">loại 1</option>
+                <option value="2">loại 2</option>
+                <option value="3">loại 3</option>
+            </select>
+        </p>
+        <p>
+            <label>Đơn giá</label>
+            <input type="number" id="don_gia">
+        </p>
+        <p>
+            <label for="">Số lượng</label>
+            <input type="number" id="so_luong">
+        </p>
+        <p>
+            <label>Nơi nhận hàng</label>
+            <input type="radio" name="dia_chi" id="noithanh" onclick="hienthi()">
+            <label for="noithanh">Nội thành</label>
+            <input type="radio" name="dia_chi" id="ngoaithanh">
+            <label for="noithanh">Ngoại thành</label>
+        </p>
+        
+        <p style="display: none" id="phivc_noithanh">
+            <label for="">Phí vận chuyển</label>
+            <input type="number" value="2000">
+        </p>
+        <p>
+            <label for="">Màu sắc</label>
+            <label for=""><input type="checkbox" name="mau_sac">Đỏ</label>
+            <label for=""><input type="checkbox" name="mau_sac">Vàng</label>
+            <label for=""><input type="checkbox" name="mau_sac">Xanh</label>
+
+        </p>
+        <button type="submit">Đặt mua</button>
+    </form>
+<script src="main.js"></script>
+</body>
+
+</html>

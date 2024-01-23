@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .prevent ul {
+            display: none;
+        }
+
+        input:focus~.prevent-ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div>Box</div>
+    <div class="box">
+        <h1>heding</h1>
+    </div>
+    <ul class="courses-list">
+
+    </ul>
+    <h2>
+        <span>DOM event 1</span>
+    </h2>
+    <h2>
+        <span>DOM event 2</span>
+    </h2>
+    <h1>DOM events example
+    </h1>
+    <input type="text">
+    <input type="checkbox">
+    <select name="" id="">
+        <option value="Value 1">1</option>
+        <option value="Value2">2</option>
+        <option value="Value3">3</option>
+    </select>
+    <div>
+        <h1>
+            PreventDefault and StopPropagation
+        </h1>
+        <a href="https://chat.openai.com/">GPT</a><br>
+        <a href="google.com.vn">GG</a>
+    </div>
+    <div class="prevent">
+        <h2>PreventDefault</h2>
+        <input type="text">
+        <ul class="prevent-ul">
+            <li>js</li>
+            <li>php</li>
+            <li>golang</li>
+        </ul>
+    </div>
+    <div>
+        <h2> StopPropagation</h2>
+        <div class="div_propagation">DIV
+            <button class="button_propagation">Clickme</button>
+        </div>
+    </div>
+    <div>
+        <h2> Event listener</h2>
+        <button class="button_Eventlistener">Clickme</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

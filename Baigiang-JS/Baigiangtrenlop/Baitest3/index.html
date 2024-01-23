@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="kiemtra()">
+        <h2>FROM ĐĂNG NHẬP</h2>
+        <p>
+            <label for="">Tên đăng nhập</label>
+            <input type="text" id="name">
+        </p>
+        <P>
+            <label for="">Mật khẩu</label>
+            <input type="text" id="password">
+        </P>
+        <p>
+            <label for="">Email</label>
+            <input type="text" id="email">
+        </p>
+        <p>
+            <label for="">SĐT</label>
+            <input type="text" id="phone">
+        </p>
+        <button>Đăng ký</button>
+    </form>
+    <script>
+        function kiemtra() {
+            var name = document.getElementById("name")
+            var password = document.getElementById("password")
+            var email = document.getElementById("email")
+            var phone = document.getElementById("phone")
+            //Tên
+            if (name.value.length == 0) {
+                alert("Bạn chưa nhập tên");
+            }
+            // Kiểm tra mật khẩu không để trống và có độ dài từ 8 đến 15 ký tự, có ít nhất 1 chữ in hoa
+            const passwordRegex = /^(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+            if (!passwordRegex.test(password.value)) {
+                alert('Mật khẩu phải có độ dài từ 8 đến 15 ký tự và ít nhất 1 chữ in hoa');
+                return;
+            }
+
+            // Kiểm tra email không để trống và có định dạng đúng
+            const emailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+            if (!emailRegex.test(email.value)) {
+                alert('Email phải có định dạng đúng: abc@gmail.com');
+                return;
+            }
+            // Kiểm tra số điện thoại không để trống và chỉ chứa số, không quá 10 ký tự
+            const phoneRegex = /^[0-9]{1,10}$/;
+            if (!phoneRegex.test(phone.value)) {
+                alert('Số điện thoại phải chỉ chứa số và không quá 10 ký tự');
+                return;
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

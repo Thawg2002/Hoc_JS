@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">Ví dụ về node trong JS</div>
+    <button onclick="add_child">Ket qua</button>
+    <script>
+        function add_child() {
+            //Tạo phần tử p
+            var p = document.createElement("p")
+
+            //tạo phần tử text
+            var node = document.createTextNode("JS cơ bản")
+
+            //Gắn vào p
+            p.appendChild(node);
+            //Thay đổi một số thuộc tính của p
+            //appendChild(node);
+            p.style.backgroundColor = 'red'
+            p.style.padding = '10px'
+            p.style.color = 'White'
+
+            var div = document.getElementById("demo");
+            //gắn p vào div
+            div.appendChild(p)
+        }
+    </script>
+</body>
+
+</html>

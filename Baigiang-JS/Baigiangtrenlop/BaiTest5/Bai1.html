@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body onload="loadanh()">
+    <div>
+        <img src="img/img0.jpg " alt="" id="slideshow" >
+        <button onclick="pre()">PRE</button>
+        <button onclick="next()">NEXT</button>
+    </div>
+    <script>
+        hinhanh = []
+        var j = 0;
+        function loadanh(){
+            for (let i = 0; i < 5; i++) {
+                hinhanh[i] = new Image();
+                hinhanh[i].src = "img/img" +i + ".jpg"
+                
+            }
+
+
+        }
+        function pre(){
+            j--;
+            if(j <0 ){
+                j = 4
+            }
+            document.getElementById("slideshow").src = hinhanh[j].src;
+        }
+        function next(){
+            j++;
+            if(j>4){
+                j=0
+            }
+            document.getElementById("slideshow").src = hinhanh[j].src;
+        }
+        
+    </script>
+</body>
+</html>

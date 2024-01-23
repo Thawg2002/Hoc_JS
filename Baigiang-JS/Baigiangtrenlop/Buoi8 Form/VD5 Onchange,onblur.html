@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="my-frm">
+        <input type="text" name="firstname" placeholder="First name" onratechange="logEvent()"> 
+        <input type="text" name="lasttname" placeholder="Last name"  onratechange="logEvent()"> 
+        <input type="button" onclick="sendInfo()" value="Submit">
+        <span id="welcome"></span>
+    </form>
+    <script>
+        function logEvent(){
+            let p = event.target;
+            if(p.name == "firstname"){
+                message("First Name Changed to" + p.value);
+            }
+            else{
+                message("Last Name Changed to"+p.value);
+            }
+        }
+        function sendInfo(){
+            let p = event.target.parentElement;
+            //Truy xuat cac phan tu cua form
+          
+            message("welcome" + p.firstname.value+" "+p.lastname.value);
+            //Hien thi thong tin
+        }
+        function message(msg){
+            document.getElementById("welcome").innerHTML = msg;
+        }
+    </script>
+</body>
+</html>

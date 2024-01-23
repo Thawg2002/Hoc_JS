@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- SLIDESHOW -->
+</head>
+<body onload="loadAnh();">
+    <img id="hoa" src="https://bazantravel.com/cdn/medias/uploads/29/29068-di-san-trang-an-ninh-binh.jpg"
+     alt="">
+    <input type="button" value="back" onclick="back();">
+    <input type="button" value="next" onclick="next();">
+    <script>
+        var anhAr = [];
+        
+        
+        var currenIndex = 0;
+        function loadAnh(){
+            for (let i = 0; i < 6; i++) {
+                anhAr[i] =  new Image();
+                anhAr[i].src = "img/img"+ i +".jpg"
+                
+            }
+        }
+        function next(){
+            if(currenIndex <6){
+                currenIndex++;
+                document.getElementById("hoa").src = anhAr[currenIndex].src;
+
+
+            }
+        }
+        function back() {
+            if (currenIndex >0) {
+                currenIndex--;
+                document.getElementById("hoa").src = anhAr[currenIndex].src;
+            }
+        }
+
+    </script>
+</body>
+</html>

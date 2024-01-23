@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p id="p1">Day la dong so 1</p>
+        <p id="p2">Day la dong 2</p>
+
+    </div>
+
+    <script>
+      var p = document.createElement("p")
+      p.innerText = 'phan tu thay the'
+
+      var parent = document.getElementById("demo")
+      var child = document.getElementById("p1")
+      parent.replaceChild(p,child)
+        
+    </script>
+</body>
+</html>

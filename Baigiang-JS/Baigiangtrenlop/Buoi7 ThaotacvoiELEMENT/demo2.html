@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="red">đỏ</div>
+    <div id="orange">cam</div>
+    <div id="yellow"></div>
+    <div id="green">kkk</div>
+    <div id="blue">kkk</div>
+    <div id="indigo">gggh</div>
+    <div id="violet">lll</div>
+    <button onclick="hienthi()"> hienthi</button>
+    <script>
+        function hienthi(){
+            let mau = document.getElementsByTagName("div");
+            for (let i = 0; i < mau.length; i++) {
+                mau[i].style.backgroundColor = mau[i].id;
+                // console.log(mau[i].id);
+                
+            }
+        }
+    </script>
+</body>
+</html>

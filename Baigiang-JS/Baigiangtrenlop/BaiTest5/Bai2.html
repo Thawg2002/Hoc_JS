@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" onsubmit=" return kiemtra()">
+        <div>
+            <h3>ĐỔI MẬT KHẨU</h3>
+        </div>
+        <p>
+            <label for="">EMAIL</label>
+            <input type="text" id="email">
+        </p>
+        <p>
+            <label for="">Mật khẩu cũ</label>
+            <input type="text" id="mkcu" placeholder="abc@123abc">
+        </p>
+        <p>
+            <label for="">Mật khẩu mới</label>
+            <input type="text" id="mkmoi">
+        </p>
+        <p>
+            <label for="">Gõ lại mật khẩu</label>
+            <input type="text" id="mkmoi2">
+        </p>
+        <button>Đổi mật khẩu</button>
+    </form>
+    <script>
+        function kiemtra() {
+            var email = document.getElementById("email")
+            var mkcu = document.getElementById("mkcu")
+            var mkmoi = document.getElementById("mkmoi")
+            var mkmoi2 = document.getElementById("mkmoi2")
+            //email
+            if (email.value != "") {
+                if (email.value.length < 8) {
+                    alert("email phải lớn hơn 8 ký tự")
+                    return false;
+                }
+            } else {
+                alert("Moi nhap email")
+                return false;
+            }
+            //mk cũ
+            if (mkcu.value != "") {
+
+                if (mkcu.value != "abc@123abc") {
+                    alert("Mật khẩu cũ chưa đúng")
+                    return false;
+                }
+
+            } else {
+                alert("Moi nhap mật khẩu cũ")
+                return false;
+            }
+            //mk mới
+            if (mkmoi.value != "") {
+                if (mkmoi.value.length < 4) {
+                    document.getElementById("mkmoi").style.color = "red";
+                    alert("Mật khẩu yếu")
+                    
+                }
+                else if (mkmoi.value.length < 10) {
+                    document.getElementById("mkmoi").style.color = "orange";
+                    alert("Mật khẩu trung bình")
+                    
+                }
+                else if (mkmoi.value.length >= 10) {
+                    alert("Mật khẩu mạnh")
+                    document.getElementById("mkmoi").style.color = "blue";
+                   
+
+                }
+
+            } else {
+                alert("Moi nhap mật khẩu mới")
+                return false;
+            }
+            //nhap lại mk
+            if (mkmoi2.value != "") {
+                if (mkmoi2.value != mkmoi.value) {
+                    alert("mật khẩu nhập lại chưa chính xác");
+                    return false;
+
+                }
+            }
+            else {
+                alert("mật khẩu nhập lại chưa chính xác")
+                return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

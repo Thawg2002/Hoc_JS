@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="shape" class="square"></div>
+    <button onclick="changeAttr()">Change attributes...</button>
+    <script>
+        function changeAttr(){
+            let el = document.getElementById("shape");
+            el.setAttribute("style","background-color:red;border:1px solid black");
+            el.setAttribute("id","new");
+            el.setAttribute("class","circle");
+        }
+    </script>
+</body>
+</html>

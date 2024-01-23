@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.load = function(){
+        document.getElementById("square").addEventListener("click",changeColor);
+
+    }
+    function changeColor(){
+        window.alert("hello");
+        let red = Matth.floor(Math.random() * 256);
+        let green = Matth.floor(Math.random() * 256);
+        let blue = Matth.floor(Math.random() * 256);
+        this.style.backgroundColor = 'rgb(${red}, ${green}, ${blue})';
+    }
+</script>
+<body onload="load()">
+<button class="shap" id="square"> Click vào đây</button>
+
+</body>
+</html>

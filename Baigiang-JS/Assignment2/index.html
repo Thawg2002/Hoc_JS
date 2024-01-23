@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body onload="loadanh()">
+    <div class="header_top">
+        <div class="logo_img">
+            <img src="img/logo.webp" alt="">
+        </div>
+        <div class="header_menu">
+            <ul>
+                <li>HÀNG MỚI</li>
+                <li>BÁN CHẠY</li>
+                <li>SẢN PHẨM</li>
+                <li>SALE</li>
+                <li>HƯỚNG DẪN</li>
+                <li><a href="index2.html"></a> ĐĂNG KÍ</li>
+            </ul>
+        </div>
+    </div>
+    <div id="header_banner" >
+        <div  >
+            <img src="img/img0.jpg" id="slideshow">
+    
+            <i class="fa fa-chevron-circle-left" onclick="imgback()"></i>
+            <i class="fa fa-chevron-circle-right" onclick="imgnext()"></i>
+            <!-- <button onclick="imgback()">Back</button>
+            <button onclick="imgnext()">Next</button> -->
+        </div>
+    </div>
+    <div class="content_text">
+        <h2>#PIGOFASHION X COMMUNITY</h2>
+        <p style="font-size: larger;">
+            Hãy để những trải nghiệm thời trang của bạn trở nên thật tuyệt vời cùng các sản phẩm PigoFashion. Đừng quên sử dụng hashtag #pigofashion để cùng chia sẻ khoảnh khắc với PigoFashion nha.
+        </p>
+    </div>
+    <div class="content_main">
+        <div class="row">
+            <div class="rol">
+                <img src="img/ao1.jpg" alt="" onmouseenter="bigimg(this)" onmouseleave="nomalimg(this)" border="0">
+                <p>ÁO SƠ MI NAM CÔNG SỞ FORM REGULAR MỀM MỊN MAU KHÔ HẠN CHẾ MÙI SMF06 PIGOFASHION</p> 
+                 <strong style="color: red; font-size: large;">199.000đ</strong> <del>229.000đ</del> <br>
+                   <button style="margin-top: 10px; margin-bottom: 10px;
+                   font-size: 15px; color: black;" onclick="themsp()" > + Thêm giỏ hàng</button>
+            </div>
+            <div class="rol">
+                <img src="img/ao2.jpg" alt="" onmouseenter="bigimg(this)" onmouseleave="nomalimg(this)" border="0">
+                <p>ÁO SƠ MI NAM CÔNG SỞ FORM REGULAR MỀM MỊN MAU KHÔ HẠN CHẾ MÙI SMF06 PIGOFASHION</p> 
+                <strong style="color: red; font-size: large;">199.000đ</strong> <del>229.000đ</del> <br>
+                <button style="margin-top: 10px; margin-bottom: 10px;
+                font-size: 15px; color: black;" onclick="themsp()" > + Thêm giỏ hàng</button>
+            </div>
+            <div class="rol">
+                <img src="img/ao3.jpg" alt="" onmouseenter="bigimg(this)" onmouseleave="nomalimg(this)" border="0">
+                <p>ÁO SƠ MI NAM CÔNG SỞ FORM REGULAR MỀM MỊN MAU KHÔ HẠN CHẾ MÙI SMF06 PIGOFASHION</p> 
+                <strong style="color: red; font-size: large;">199.000đ</strong> <del>229.000đ</del> <br>
+                <button style="margin-top: 10px; margin-bottom: 10px;
+                font-size: 15px; color: black;" onclick="themsp()" > + Thêm giỏ hàng</button>
+            </div>
+            <div class="rol">
+                <img src="img/ao4.jpg" alt="" onmouseenter="bigimg(this)" onmouseleave="nomalimg(this)" border="0">
+                <p>ÁO SƠ MI NAM CÔNG SỞ FORM REGULAR MỀM MỊN MAU KHÔ HẠN CHẾ MÙI SMF06 PIGOFASHION</p> 
+                <strong style="color: red; font-size: large;">199.000đ</strong> <del>229.000đ</del> <br>
+                <button style="margin-top: 10px; margin-bottom: 10px;
+                font-size: 15px; color: black;" onclick="themsp()" > + Thêm giỏ hàng</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

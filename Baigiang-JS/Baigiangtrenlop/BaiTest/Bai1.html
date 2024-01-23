@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            img{
+                width: 100%;
+                height: 600px;
+            }
+        </style>
+    </head>
+    <body onload="loadanh()">
+        <div>
+            <img id="slideshow" src="img/img0.jpg"> 
+            <button onclick="imgback()">Back</button>
+            <button onclick="imgnext()">Next</button>
+        </div>
+        <script>
+            hinhanh = [];
+            var j = 0;
+            function loadanh(){
+                for (let i = 0; i < 5; i++) {
+                    hinhanh[i] = new Image();
+                    hinhanh[i].src = "img/img" + i + ".jpg";
+                    
+                }
+
+            }
+            function imgnext(){
+                    j++;
+                    if(j>5){
+                        j = 0;
+                    }
+                    document.getElementById("slideshow").src = hinhanh[j].src;
+               
+            }
+            function imgback(){
+               
+                if(j > 0){
+                    j--;
+                    if(j<0){
+                        j = hinhanh.length - 1;
+                    }
+                    document.getElementById("slideshow").src = hinhanh[j].src;
+                }
+            }
+            // setInterval(function(){
+            //     j++;
+            //     if(j>4){
+            //         j=0;
+            //     }
+            //     document.getElementById("slideshow").src = hinhanh[j].src;
+            // },1000)
+           
+        </script>
+    </body>
+    </html>
+</body>
+</html>

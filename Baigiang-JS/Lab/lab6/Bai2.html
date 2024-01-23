@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body onload="loading()">
+    <div class="boxcenter"> 
+        <div class="row">
+        <img id="slideshow" src="img/img0.jpeg" alt="">
+        <h1 id="title">1/5</h1>
+        <button onclick="imgFirst()">First</button>
+        <button onclick="imgPrev()">Prev</button>
+        <button onclick="imgNext()">Next</button>
+        <button onclick="imgLast()">Last</button>
+        </div>
+    </div>
+    <script>
+        var hinhanh = [];
+        var j = 0;
+        function loading(){
+            for (let i = 0; i < 5; i++) {
+                hinhanh[i] = new Image();
+                hinhanh[i].src = "img/img" + i + ".jpg";
+                
+            }
+            loadtilte()
+        }
+        function imgFirst(){
+            j = 0;
+            document.getElementById("slideshow").src = hinhanh[j].src;
+            loadtilte()
+        }
+
+        function imgLast(){
+            j = hinhanh.length - 1;
+            document.getElementById("slideshow").src = hinhanh[j].src;
+            loadtilte()
+        }
+
+        function imgPrev(){
+           if(j > 0) j--;
+            document.getElementById("slideshow").src = hinhanh[j].src;
+            loadtilte()
+        }
+
+        function imgNext(){
+            j++;
+            document.getElementById("slideshow").src = hinhanh[j].src;
+            loadtilte()
+        }
+
+        function loadtilte(){
+            k = j+1;
+            document.getElementById("title").innerHTML = k+ "/"+hinhanh.length;
+        }
+
+    </script>
+    
+</body>
+</html>

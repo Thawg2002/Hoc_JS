@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 6 giá trị false
+        false
+        0
+        null
+        naN
+        undefined
+        ''
+        */
+        var a = 1;
+        var b = 2;
+
+        var result = 'A' && 'B' && 0;
+        console.log('result',result);
+
+        var convert = 'A' || null;
+        console.log('convert',convert);
+
+        /*
+        && thì nó ưu tiên lấy giá trị False hơn. Lý do là vì: A && B nghĩa là đồng thời cả A và B phải đúng thì nó mới đúng.
+         Còn nếu 1 trong 2 sai thì nó sẽ bị sai. Nếu cùng đúng thì lấy giá trị đúng cuối cùng (Vì nó duyệt từ trái qua phải
+          đến vị trí đúng cuối cùng mới lấy). Còn nếu sai thì lấy luôn giá trị sai tại vị trí đó. Cả 2 cùng sai thì sẽ lấy giá trị sai cuối cùng
+
+        || thì nó dễ tính hơn, ưu tiên lấy giá trị True hơn. Lý do là vì: A || B nghĩa là chỉ cần A hoặc B đúng là nó sẽ đúng, 
+và nó cũng duyệt từ trái qua phải, gặp thằng nào đúng là lấy luôn giá trị đó. Còn nếu cả 2 cùng sai thì lấy giá trị sai đầu tiên. 
+Cả 2 cùng đúng thì sẽ lấy giá trị đúng đầu tiên.
+        */
+    </script>
+</body>
+
+</html>

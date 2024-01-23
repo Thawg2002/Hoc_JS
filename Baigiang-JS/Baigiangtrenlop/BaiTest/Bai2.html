@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="kiemtra()">
+        <h2>ĐĂNG KÝ</h2>
+        <p>
+            <label>Tên</label>
+            <input type="text" id="lastname">
+        </p>
+        <p>
+            <label>Tuổi</label>
+            <input type="number" id="date">
+        </p>
+        <p>
+            <label>Địa chỉ</label>
+            <input type="text" id="home">
+        </p>
+        <p>
+            <label>Gioi tính</label>
+            <label><input type="radio" name="gender">Nam</label>
+            <label><input type="radio" name="gender">Nữ</label>
+        </p>
+        <button>Đăng ký</button>
+    </form>
+    <script>
+        function kiemtra(){
+            var ten = document.getElementById("lastname");
+            var tuoi = document.getElementById("date");
+            var diachi = document.getElementById("home");
+            var gioitinh = document.getElementsByName("gender");
+
+            if(ten.value.length == 0){
+                alert("Chưa nhap ten")
+            }
+            if(tuoi.value == 0){
+                alert("Chưa nhập tuổi")
+            }
+            if(diachi.value.length == 0){
+                alert("Chưa nhập dia chỉ")
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

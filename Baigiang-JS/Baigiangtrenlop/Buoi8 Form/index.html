@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="my-frm">
+        <input type="text" name="firstname" placeholder="First name"> 
+        <input type="text" name="lasttname" placeholder="Last name"> 
+        <input type="button" onclick="sendInfo()" value="Submit">
+        <div id="welcome"></div>
+    </form>
+    <script>
+        function sendInfo(){
+            var input = document.getElementById("my-frm").elements;
+            //Truy xuat cac phan tu cua form
+            var inputByIndex = inputs[0];
+            //truy xuat cac phan tu dau tien
+            var inputByname = inputs["firstname"];
+            //Truy xuaats phan tu co ten la firsname
+            message("welcome" + inputs["firstname"].value + " " + inputs["lastname"].value);
+            //Hien thi thong tin
+        }
+        function message(msg){
+            document.getElementById("welcome").innerHTML = msg;
+        }
+    </script>
+</body>
+</html>

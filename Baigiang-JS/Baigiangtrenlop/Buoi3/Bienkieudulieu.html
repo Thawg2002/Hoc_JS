@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let  funActivity = "let's lean JavaScript";
+       let str = "My name is \"Mike\"";
+
+       console.log(funActivity);
+       console.log(str);
+       console.log(funActivity.length);//lấy độ dài
+       console.log(str.substring(0,3));//lấy phần tử
+
+       //concat:Nối chuỗi
+       let text1 = "Hello";
+       let text2 = "World";
+       let text3 = text1.concat(" ",text2);
+       console.log(text3);
+
+       //toUpperCase:Viết hoa
+       let text4 = text3.toUpperCase();
+       console.log(text4);
+
+       //toLowerCase: viết thường
+       text5 = text3.toLowerCase();
+       console.log(text5);
+
+       //isNaN() : xác định xem tham số truyền vào có phải là số k
+       // Đúng -> False     Sai -> True
+       let x = 7;
+       console.log(isNaN(x));
+
+       //isInteger() : tuong đương isNaN
+       let string22 = "integer";
+       console.log(Number.isInteger(string22));
+    </script>
+</body>
+</html>l
